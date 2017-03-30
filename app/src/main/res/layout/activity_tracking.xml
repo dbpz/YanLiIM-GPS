@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="li.yan.im.yanliim_gps.TrackingActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PLEASE SCAN" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linearLayout"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_running"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Runnig"
+                        android:onClick="onRadioIconClicked"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton_driving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Drive"  android:onClick="onRadioIconClicked"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton_cycling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cycling"  android:onClick="onRadioIconClicked"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton_pt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PT" android:onClick="onRadioIconClicked" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_3s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3s" android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_15s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15s" android:onClick="onRadioButtonClicked" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_40s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="40s"  android:onClick="onRadioButtonClicked"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton_120s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120s" android:onClick="onRadioButtonClicked" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TRACK" />
+
+            <Button
+                android:id="@+id/button_scan_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SCAN QR" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
